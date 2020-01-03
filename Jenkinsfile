@@ -1,14 +1,13 @@
 pipeline {
 
   environment {
-    registry = "68.183.91.33:5000/justme/myweb"
+    registry = "10.139.148.30:5000/myweb"
     dockerImage = ""
   }
 
   agent any
 
   stages {
-
     stage('Checkout Source') {
       steps {
         git 'https://github.com/saptaktakalkar/playjenkins.git'
@@ -40,7 +39,5 @@ pipeline {
         }
       }
     }
-
   }
-
 }
