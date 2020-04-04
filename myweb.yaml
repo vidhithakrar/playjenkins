@@ -16,7 +16,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: 10.139.148.30:5000/myweb:10
+      - image: saptaktw/myweb:1
         imagePullPolicy: Always
         name: myweb
 ---

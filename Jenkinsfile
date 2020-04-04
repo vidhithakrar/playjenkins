@@ -1,7 +1,8 @@
 pipeline {
 
   environment {
-    registry = "10.139.148.30:5000/myweb"
+    registry = "saptaktw/endgame"
+    registryCredential = 'dockerhub'
     dockerImage = ""
   }
 
@@ -17,7 +18,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build registry + ":10"
+          dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
       }
     }
