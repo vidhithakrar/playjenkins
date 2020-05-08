@@ -1,0 +1,7 @@
+@Library(value="my-jenkins-shared-library", changelog=false) _
+
+projectConfig = [
+        projectName: "playjenkins"
+]
+
+buildBackendServicePipeline(projectConfig)
